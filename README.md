@@ -1,56 +1,77 @@
 # datamaster
 Repositorio para salvar os códigos e instruções para a capacitação do datamaster
 
-# Guia Rápido: Criar Conta AWS, Usuário de Serviço e Configurar AWS CLI
+## ✅ Pré-requisitos
 
-## 1. Criar uma Conta na AWS
+- Conta AWS ativa
+- Permissões para acessar o serviço **Amazon Kinesis**
+- AWS CLI configurado (caso use a linha de comando)
 
-1. Acesse: [https://aws.amazon.com/pt/free](https://aws.amazon.com/pt/free)
-2. Clique em **Criar uma conta da AWS**.
-3. Insira seu e-mail, nome de usuário e senha.
-4. Escolha o tipo de conta (Pessoal ou Empresarial).
-5. Adicione as informações de pagamento (necessário mesmo para o plano gratuito).
-6. Verifique sua identidade (via SMS).
-7. Escolha um plano (pode selecionar o **Plano Básico Gratuito**).
+
+# 01 -Kinesis Data Stream com Nome `broker` na AWS
+
+Criar o Kinesis Data Stream com o nome `broker` 
+
+1. Acesse o console:  
+   [https://console.aws.amazon.com/kinesis](https://console.aws.amazon.com/kinesis)
+
+2. No menu lateral, selecione **Data Streams**.
+
+3. Clique em **Create data stream**.
+
+4. Preencha o campo:
+   - **Data stream name**: `broker`
+
+5. Em **Number of shards**, deixe o valor padrão: `1`
+
+6. Clique em **Create data stream**
+
+7. Aguarde a criação do stream. Você será redirecionado para a página de detalhes do stream `broker`.
+
+## 02 IAM Role producer_iam
+
+### 1. Acesse o serviço IAM
+
+1. Faça login no [Console da AWS](https://console.aws.amazon.com/)
+2. No campo de busca superior, digite **IAM** e selecione o serviço.
+3. No menu à esquerda, clique em **Roles**.
+
+### 2. Criar uma nova Role
+
+1. Clique em **Create role** (canto superior direito).
+
+### 3. Escolher entidade confiável (Trusted Entity)
+
+1. Em **Trusted entity type**, selecione: `AWS service`
+2. Em **Use case**, selecione ou busque por: `Lambda`
+3. Clique em **Next**
+
+### 4. Adicionar permissões
+
+1. Pesquise e selecione a política:  
+   - `AWSLambdaBasicExecutionRole`
+
+2. Em seguida, pesquise e selecione a política:  
+   - `AmazonKinesisFullAccess`
+
+> ⚠️ Essas políticas concedem permissões básicas para o Lambda funcionar e acesso completo ao Kinesis. Em produção, considere limitar o acesso com políticas customizadas.
+
+### 5. Definir nome e descrição
+
+1. Em **Role name**, digite: `producer_iam`
+2. A descrição será preenchida automaticamente, mas pode ser ajustada se necessário.
+3. Clique em **Next**
+
+### 6. Tags (opcional)
+
+- Nenhuma tag é necessária neste exemplo. Clique em **Next**
+
+### 7. Revisar e criar
+
+- Verifique se as permissões estão corretas:
+  - `AWSLambdaBasicExecutionRole`
+  - `AmazonKinesisFullAccess`
+- Clique em **Create role**
 
 ---
-
-## 2. Criar um Usuário de Serviço com Access Key e Secret Key
-
-> ⚠️ **Importante**: Nunca use o usuário root para automações.
-
-1. Acesse o [Console da AWS](https://console.aws.amazon.com/)
-2. Vá até o serviço **IAM** (Gerenciamento de Identidade e Acesso).
-3. No menu lateral, clique em **Usuários** > **Adicionar usuários**.
-4. Nomeie o usuário (ex: `meu-usuario-servico`).
-5. Selecione **Acesso programático**.
-6. Clique em **Permissões**:
-   - Escolha **Anexar políticas diretamente**.
-   - Para testes, selecione **AdministratorAccess** (ou crie uma política personalizada).
-7. Avance e crie o usuário.
-8. Copie e salve:
-   - **Access Key ID**
-   - **Secret Access Key**
-
-> 🔐 **Nunca compartilhe essas chaves**. Trate como senhas.
-
----
-
-## 3. Baixar e Configurar o AWS CLI
-
-### 3.1 Instalar AWS CLI
-
-#### Windows
-
-- Baixe o instalador:  
-  [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/)
-- Execute o `.msi` e siga os passos da instalação.
-
-#### Linux / macOS
-
-```bash
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-
 
