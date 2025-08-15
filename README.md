@@ -2,7 +2,7 @@
 Repositorio para salvar os códigos e instruções para a capacitação do datamaster
 
 ## I - Objetivo do Case
-Desenvolver um sistema de alertas climáticos que detecte eventos extremos em tempo real e envie notificações precisas aos usuários, além de armazenar os dados para futuras análises
+Desenvolver um sistema de alertas climáticos que detecte eventos extremos em tempo real e envie notificações precisas aos usuários, além de armazenar os dados para futuras análises. O sistema quando atinge os paramêtros configurados envia um alerta por SMS para os clientes para que ele tome as medidaas necessárias.
 
 ## II - Arquitetura da Solução e Técnica
 ### Arquitetura da Solução
@@ -36,7 +36,7 @@ Não houve necessidade de mascaramento dos dados, pois os dados não são sensí
 A arquitetura utilizado foi a Lambda, uma parte em streaming para enviar os alertas e outra em batch para armazenar os resultados dos alertas
 
 **8. Escalabilidade**
-Por estar na plataforma AWS todo os componentes possuem auto-scale que possibilitam o auto-scale
+Por estar na plataforma AWS todo os componentes possuem auto-scale que possibilitam o auto-scale.
 
 **9. Reprodutibilidade da arquitetura**
 Para reproduzir a arquitetura é necessário seguir os arquivos de passo a passso de configuração que estão na pasta https://github.com/elivelton/datamaster/tree/main/docs
