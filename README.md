@@ -18,10 +18,10 @@ Segue a arquitetura técnica da solução . A explicação de cada componente es
 Os daos são extraídos da api da plataforma Tommorrow IO https://docs.tomorrow.io/reference/welcome que contém dados metereológicos de Probrabilidade de Chuva, Velocidade do Vento e Intensidade da Chuva entre outros.
 
 **2. Ingestão de dados**
-Há duas forma de ingestão de dados no projeto . Uma por streaming para enviar os alertas para os usuários e outra via batch para guardar os dados no banco de dados dos alertas emitidos para análise posterior
+Há duas forma de ingestão de dados no projeto . Uma por streaming que verifica os dados em tempo real para enviar os alertas para os usuários, e outra via batch para guardar os dados no banco de dados dos alertas emitidos para análise posterior. 
 
 **3. Armazenamento dos dados**
-O armazenamento dos dados é feito primeiramente n em buckets divididos dados brutos (RAW) e dados tratados (Gold). E depois para visualizar essas informações utilizamos o banco de dados Athena
+O armazenamento dos dados é feito primeiramente em buckets divididos dados brutos (RAW) e dados tratados (Gold). E depois para visualizar essas informações utilizamos o banco de dados Athena que permite fazer as consultas e análises.
 
 **4. Observabilidade**
 Foi utilizado os monitores da plataforma nos componentes lambda é possivel observar os fluxos de dados, gerenciamento de possíveis erros e chamadas
@@ -39,7 +39,7 @@ A arquitetura utilizado foi a Lambda, uma parte em streaming para enviar os aler
 Por estar na plataforma AWS cloud todo os componentes possuem facil escalabilidade.
 
 **9. Reprodutibilidade da arquitetura**
-Para reproduzir a arquitetura é necessário seguir os arquivos de passo a passso de configuração que estão na pasta https://github.com/elivelton/datamaster/tree/main/docs
+Para reproduzir a arquitetura e rodar o projeto é necessário seguir os arquivos de passo a passso de configuração que estão na pasta https://github.com/elivelton/datamaster/tree/main/docs
  
 
 ## IV - Melhorias e Considerações Finais
