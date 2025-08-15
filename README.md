@@ -43,8 +43,8 @@ Para reproduzir a arquitetura é necessário seguir os arquivos de passo a passs
  
 
 ## IV - Melhorias e Considerações Finais
--Envio de dados pelo Whatsapp/Telegram
--Adicionar uma tabela com as informações de outras cidades 
+-Envio de dados pelo Whatsapp/Telegram;
+-Adicionar uma tabela com as informações de outras cidades; 
 -Considerar a localização do usuário para enviar o alerta 
 
 
