@@ -3,7 +3,7 @@ import base64
 import os
 import boto3
 
-sns_client = boto3.client('sns')
+sns_client = boto3.client('sns', region_name='us-east-1')
 
 # Substitua pelo ARN do seu tópico SNS
 SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:090656015375:snsalerta'
@@ -58,3 +58,4 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('Processed Kinesis records and sent to SNS if thresholds exceeded')
     }
+
