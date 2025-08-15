@@ -14,7 +14,7 @@ A entrada dos dados é feita via chamada de API, aonde com scripts python é fei
 
 ## III - Explicação sobre o case desenvolvido
 **1. Extração dos dados**
-Os daos são extraídos da api da plataforma Tommorrow IO [https://docs.tomorrow.io/reference/welcome](url) que contém dados metereológicos de Probrabilidade de Chuva, Velocidade do Vento e Intensidade da Chuva entre outros
+Os daos são extraídos da api da plataforma Tommorrow IO https://docs.tomorrow.io/reference/welcome que contém dados metereológicos de Probrabilidade de Chuva, Velocidade do Vento e Intensidade da Chuva entre outros
 
 **2. Ingestão de dados**
 Há duas forma de ingestão de dados no projeto . Uma por streaming para enviar os alertas para os usuários e outra via batch para guardar os dados no banco de dados dos alertas emitidos para análise posterior
