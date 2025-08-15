@@ -34,7 +34,7 @@ Este guia cria um **Job do AWS Glue** (Spark/Python) que lê dados **JSON** cata
 ---
 
 ## 2) Preparar o script
-1. Cole o **script ETL** do curso no editor.
+1. Cole o **script ETL** jobglue.py no editor.
 2. **Atualize os parâmetros** no topo do script (conforme o código do curso):
    - **Database** do catálogo (ex.: `raw_db`).
    - **OUTPUT_PATH**: S3 da camada **gold**.  
