@@ -29,7 +29,7 @@ Este guia cria a função **Lambda `Consumer-Realtime`** que lê eventos do **Ki
 
 ## 2) Adicionar o código
 1. Na aba **Code**, apague o arquivo de exemplo (`lambda_function.py` inicial).
-2. **Cole o código do Consumer** (do material do curso).
+2. **Cole o código do Consumer** consumer_realtime.py.
 3. **Substitua** no código a variável do **ARN do tópico SNS** pelo **ARN do seu tópico** (copie em **SNS → Topics → [seu tópico]**).
 4. Clique em **Deploy** (obrigatório ao colar/editar código no editor).
 
