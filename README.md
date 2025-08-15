@@ -10,7 +10,7 @@ A entrada dos dados é feita via chamada de API, aonde com scripts python é fei
 <img width="950" height="647" alt="image" src="https://github.com/user-attachments/assets/182d6223-4266-4c48-92aa-f4349b1add0f" />
 
 ### Arquitetura Técnica 
-Segue a arquitetura técnica da solução . A explicação de cada componente está no arquivo Explicacao_Componentes_Ferramentas.pdf
+Segue a arquitetura técnica da solução . A explicação de cada componente está no arquivo https://github.com/elivelton/datamaster/blob/main/Explicacao_Componentes_Ferramentas.pdf
 <img width="950" height="1031" alt="image" src="https://github.com/user-attachments/assets/2a30ca4c-6155-4ebd-9ebc-a1b4d6d0e880" />
 
 ## III - Explicação sobre o case desenvolvido
