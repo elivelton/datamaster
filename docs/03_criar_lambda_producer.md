@@ -39,7 +39,7 @@ Este guia descreve como criar uma função Lambda chamada `Producer` que consult
 
 1. Na página da função criada, vá até a seção **Code source**
 2. Clique em **Upload from** > **.zip file**
-3. Em seguida clique em **Upload** e selecione o arquivo `.zip` da função
+3. Em seguida clique em **Upload** e selecione o arquivo `lambda_function_producer.zip` da função
 4. Clique em **Save**
 
 ---
