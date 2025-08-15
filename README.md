@@ -36,7 +36,7 @@ Não houve necessidade de mascaramento dos dados, pois os dados não são sensí
 A arquitetura utilizado foi a Lambda, uma parte em streaming para enviar os alertas e outra em batch para armazenar os resultados dos alertas
 
 **8. Escalabilidade**
-Por estar na plataforma AWS todo os componentes possuem auto-scale que possibilitam o auto-scale.
+Por estar na plataforma AWS cloud todo os componentes possuem facil escalabilidade.
 
 **9. Reprodutibilidade da arquitetura**
 Para reproduzir a arquitetura é necessário seguir os arquivos de passo a passso de configuração que estão na pasta https://github.com/elivelton/datamaster/tree/main/docs
@@ -45,5 +45,6 @@ Para reproduzir a arquitetura é necessário seguir os arquivos de passo a passs
 ## IV - Melhorias e Considerações Finais
 -Envio de dados pelo Whatsapp/Telegram
 -Adicionar uma tabela com as informações de outras cidades 
+-Considerar a localização do usuário para enviar o alerta 
 
 
