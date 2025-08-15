@@ -24,7 +24,7 @@ Há duas forma de ingestão de dados no projeto . Uma por streaming para enviar 
 O armazenamento dos dados é feito primeiramente n em buckets divididos dados brutos (RAW) e dados tratados (Gold). E depois para visualizar essas informações utilizamos o banco de dados Athena
 
 **4. Observabilidade**
-Foi utilizado os monitores da plataforma da propria AWS para 
+Foi utilizado os monitores da plataforma nos componentes lambda é possivel observar os fluxos de dados, gerenciamento de possíveis erros e chamadas
 
 **5. Segurança dos Dados**
 Foi criada Roles com as permissões especificas para cada componente, garantindo que os dados sejam acessa apenas pelos usuários corretos
